@@ -32,164 +32,10 @@ from youtube_search import YoutubeSearch
 
 # load_dotenv()
 # TOKEN = os.getenv("token")
-TOKEN = 'NzA2MzM3NDg1MjYwNTg3MDQ4.Xq46bQ.gyak4rLejkdoPNqneuIRO0yA6vI'
+TOKEN = ''
 
 # os.chdir(r'D:\BSD405-Bot')
 client = commands.Bot(command_prefix='>')
-players = {}
-queues = {}
-queued = ["why"]
-
-
-@client.command()
-async def servers(ctx):
-    servers = list(client.guilds)
-    await ctx.send(f"Connected on {str(len(servers))} servers:")
-    await ctx.send('\n'.join(server.name for server in servers))
-    for guild in client.guilds:
-        print(guild)
-        for member in guild.members:
-            print(member)
-        print(' ')
-
-
-@client.command(aliases=['black', 'bj', 'blacks'])
-async def blackjack(ctx):
-    deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14] * 4
-
-    async def deal(deck):
-        hand = []
-        for i in range(2):
-            random.shuffle(deck)
-            card = deck.pop()
-            if card == 11:
-                card = "J"
-            if card == 12:
-                card = "Q"
-            if card == 13:
-                card = "K"
-            if card == 14:
-                card = "A"
-            hand.append(card)
-        return hand
-
-    async def total(hand):
-        total = 0
-        for card in hand:
-            if card == "J" or card == "Q" or card == "K":
-                total += 10
-            elif card == "A":
-                if total >= 11:
-                    total += 1
-                else:
-                    total += 11
-            else:
-                total += card
-        return total
-
-    async def hit(hand):
-        card = deck.pop()
-        if card == 11:
-            card = "J"
-        if card == 12:
-            card = "Q"
-        if card == 13:
-            card = "K"
-        if card == 14:
-            card = "A"
-        hand.append(card)
-        return hand
-
-    async def print_results(dealer_hand, player_hand):
-        await ctx.send("The dealer has a " + str(dealer_hand) + " for a total of " + str(await total(dealer_hand)))
-        await ctx.send("You have a " + str(player_hand) + " for a total of " + str(await total(player_hand)))
-
-    async def blackjack(dealer_hand, player_hand):
-        if await total(player_hand) == 21:
-            await print_results(dealer_hand, player_hand)
-            await ctx.send("Congratulations! You got a Blackjack!\n")
-        elif await total(dealer_hand) == 21:
-            await print_results(dealer_hand, player_hand)
-            await ctx.send("Sorry, you lose. The dealer got a blackjack.\n")
-
-    async def score(dealer_hand, player_hand):
-        if await total(player_hand) == 21:
-            await print_results(dealer_hand, player_hand)
-            await ctx.send("Congratulations! You got a Blackjack!\n")
-        elif await total(dealer_hand) == 21:
-            await print_results(dealer_hand, player_hand)
-            await ctx.send("Sorry, you lose. The dealer got a blackjack.\n")
-        elif await total(player_hand) > 21:
-            await print_results(dealer_hand, player_hand)
-            await ctx.send("Sorry. You busted. You lose.\n")
-        elif await total(dealer_hand) > 21:
-            await print_results(dealer_hand, player_hand)
-            await ctx.send("Dealer busts. You win!\n")
-        elif total(player_hand) < total(dealer_hand):
-            await print_results(dealer_hand, player_hand)
-            await ctx.send("Sorry. Your score isn't higher than the dealer. You lose")
-        elif await total(player_hand) > total(dealer_hand):
-            await print_results(dealer_hand, player_hand)
-            await ctx.send("ur score is higher than the dealer. You win")
-
-    def check(ctx):
-        return lambda m: m.author == ctx.author and m.channel == ctx.channel
-
-    async def get_input_of_type(func, ctx):
-        while True:
-            try:
-                msg = await client.wait_for('message', check=check(ctx))
-                return func(msg.content)
-            except ValueError:
-                continue
-
-    await ctx.send("WELCOME TO BLACKJACK!")
-    dealer_hand = await deal(deck)
-    player_hand = await deal(deck)
-    await ctx.send("The dealer is showing a " + str(dealer_hand[0]))
-    await ctx.send("You have a " + str(player_hand) + " for a total of " + str(await total(player_hand)))
-    await blackjack(dealer_hand, player_hand)
-    quit = False
-    while not quit:
-        await ctx.send("Do you want to [H]it, [S]tand, or [Q]uit")
-        choice = await get_input_of_type(str, ctx)
-        choice = choice.lower()
-        if choice == 'h':
-            await hit(player_hand)
-            await ctx.send(player_hand)
-            await ctx.send("Hand total: " + str(await total(player_hand)))
-            if await total(player_hand) > 21:
-                await ctx.send('You busted')
-                quit = True
-        elif choice == 's':
-            while await total(dealer_hand) < 17:
-                await hit(dealer_hand)
-                await ctx.send(dealer_hand)
-                if await total(dealer_hand) > 21:
-                    await ctx.send('Dealer busts, you win!')
-                    quit = True
-            await score(dealer_hand, player_hand)
-        elif choice == "q":
-            await ctx.send("Bye!")
-            quit = True
-
-
-@client.command(brief='Trivia')
-async def trivia(ctx):
-    results = requests.get('https://opentdb.com/api.php?amount=1&type=boolean').json()
-    y = results['results'][0]['question'] + ' (T/F)'
-    y = re.sub('&quot;', '"', y)
-    await ctx.send(str(y))
-    ans = results['results'][0]['correct_answer']
-    us_ans = await get_input_of_type(str, ctx)
-    if ans == 'True':
-        ans = 'T'
-    elif ans == 'False':
-        ans = 'F'
-    if ans == us_ans:
-        await ctx.send('You are correct!')
-    else:
-        await ctx.send('You are wrong.')
 
 
 def check(ctx):
@@ -240,33 +86,6 @@ async def divide(ctx):
     secondnum = await get_input_of_type(int, ctx)
     await ctx.send(f"{firstnum} / {secondnum} = {firstnum / secondnum}")
 
-
-@client.command(brief='Lyrics')
-async def lyrics(ctx, *, arg):
-    x = arg.split(',')
-    lyrics = lyricwikia.get_lyrics(str(x[0]), str(x[1]))
-    await ctx.send(lyrics[0:1900])
-    await ctx.send(lyrics[1900:-1])
-
-
-@client.command()
-async def email(ctx, email, *, content):
-    port = 587
-    smtp_server = "smtp.gmail.com"
-    sender_email = "anonymousrandyboy@gmail.com"
-    receiver_email = email
-    message = """\
-    Subject: Sent from Randy-Discord Bot
-
-    """ + content
-    context = ssl.create_default_context()
-    with smtplib.SMTP(smtp_server, port) as server:
-        server.ehlo()
-        server.starttls(context=context)
-        server.ehlo()
-        server.login(sender_email, 'randasswor2')
-        server.sendmail(sender_email, receiver_email, message)
-    await ctx.send('Email has been sent!')
 
 
 @client.command()
@@ -524,19 +343,6 @@ async def about(ctx):
     await ctx.send(embed=embed)
 
 
-@client.event
-async def on_member_join(member):
-    for channel in member.guild.channels:
-        if str(channel) == "member-log":  # We check to make sure we are sending the message in the general channel
-            await channel.send(f"""Welcome to the server {member.mention}!""")
-
-
-@client.event
-async def on_member_remove(member):
-    for channel in member.guild.channels:
-        if str(channel) == "member-log":  # We check to make sure we are sending the message in the general channel
-            await channel.send(f"""Bye Bye {member.mention}!""")
-
 
 @client.remove_command("help")
 @client.command(pass_context=True)
@@ -547,18 +353,14 @@ async def help(ctx):
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='Randy Command List')
     embed.add_field(name='`>about`', value=':eyes: About!', inline=True)
-    embed.add_field(name='`>email (to) (message)`', value=':e_mail: Send an email!', inline=True)
     embed.add_field(name='`>vote`', value=':v: Vote for Randy!', inline=True)
-    embed.add_field(name='`>feedback (feedback)`', value=':incoming_envelope: Feedback for devs.', inline=True)
     embed.add_field(name='`>server`', value='Link to invite Randy & help server', inline=True)
     embed.add_field(name='`>help_fun`', value=':smile: Fun Commands', inline=True)
-    embed.add_field(name='`>help_info`', value=':newspaper: General Information', inline=True)
     embed.add_field(name='`>help_lang`', value=':blue_book: Language Commands', inline=True)
     embed.add_field(name='`>help_math`', value=':regional_indicator_m: Math Commands', inline=True)
     embed.add_field(name='`>help_mod`', value=':hammer_pick: Moderation Commands', inline=True)
     embed.add_field(name='`>help_money`', value=':moneybag: Money Commands', inline=True)
     embed.add_field(name='`>help_music`', value=':musical_note:  Music Commands', inline=True)
-    embed.add_field(name='`>help_weather`', value=':cloud_tornado: Weather Commands', inline=True)
     embed.add_field(name='`>help_features`', value=':fork_and_knife: Other Features', inline=True)
     await ctx.send(embed=embed)
 
@@ -574,47 +376,8 @@ async def helpfun(ctx):
     embed.add_field(name='`>avatar (user)`', value=':clown: Avatar', inline=True)
     embed.add_field(name='`>dice`', value=':1234: Roll dice', inline=True)
     embed.add_field(name='`>flip`', value=':first_place: Flip coin', inline=True)
-    # embed.add_field(name='`>help_fun_image`', value=':yum: Image Commands', inline=True)
-    embed.add_field(name='`>joke`', value=':black_joker: Joke', inline=True)
-    embed.add_field(name='`>meme`', value=':stuck_out_tongue_winking_eye: Sends a meme', inline=True)
-    embed.add_field(name='`>trivia`', value=':smirk: Trivia!', inline=True)
     await ctx.send(embed=embed)
 
-
-'''@client.command(pass_context=True, aliases=['help_fun_image'])
-async def helpfunimage(ctx):
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
-    embed.set_author(name='Image Fun Commands')
-    embed.add_field(name='`>avatar (user)`', value=':clown: Avatar', inline=True)
-    embed.add_field(name='`>beautiful (user)`', value=':grimacing: Beautiful image of a user', inline=True)
-    embed.add_field(name='`>blood (user)`', value=':drop_of_blood: Image of a user with blood', inline=True)
-    embed.add_field(name='`>bobross (user)`', value=":paintbrush: Bobross painting a user's image", inline=True)
-    embed.add_field(name='`>captcha (user) (text)`', value=":beverage_box: Captcha with a user's image", inline=True)
-    embed.add_field(name='`>jackolantern (user)`', value=':jack_o_lantern: Jackolantern image of a user', inline=True)
-    embed.add_field(name='`>prison (user)`', value=':police_officer: Image of a user in the prison', inline=True)
-    embed.add_field(name='`>treasure (user)`', value=":moneybag: User's image on a treasure map", inline=True)
-    embed.add_field(name='`>triggered (user)`', value=":triangular_flag_on_post: User's image with the triggered tag",
-                    inline=True)
-    embed.add_field(name='`>rainbow (user)`', value=":rainbow: Rainbow colors on a user's image", inline=True)
-    embed.add_field(name='`>whatspokemon (user)`', value=":dog: User's image on a pokemon template", inline=True)
-    await ctx.send(embed=embed)'''
-
-
-@client.command(pass_context=True, aliases=['help_info'])
-async def helpinfo(ctx):
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
-    embed.set_author(name='General Information Commands')
-    embed.add_field(name='`>covid (place)`', value=':mask: Covid-19 Related info', inline=True)
-    embed.add_field(name='`>news (topic)`', value=':newspaper: News', inline=True)
-    embed.add_field(name='`>NYT`', value=':newspaper2: News from NYT', inline=True)
-    embed.add_field(name='`>wiki (noun)`', value=':bookmark: Wikipedia', inline=True)
-    await ctx.send(embed=embed)
 
 
 @client.command(pass_context=True, aliases=['help_lang'])
@@ -624,13 +387,8 @@ async def helplanguage(ctx):
     b = random.randint(0, 255)
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='Language Commands')
-    embed.add_field(name='`>ant (word)`', value=':bookmark_tabs: Antonym', inline=True)
-    embed.add_field(name='`>define (word)`', value=':notebook_with_decorative_cover: Dictionary', inline=True)
     embed.add_field(name='`>quote`', value=':orange_book: Quote', inline=True)
-    embed.add_field(name='`>syn (word)`', value=':bookmark_tabs: Synonym', inline=True)
-    embed.add_field(name='`>translate (src) (dest) (word)`', value=':earth_americas: Translate', inline=True)
     embed.add_field(name='`>urban (word)`', value=':closed_book: Urban Dictionary', inline=True)
-    embed.add_field(name='`>wordoftheday`', value=':blue_book: Word of the day', inline=True)
     await ctx.send(embed=embed)
 
 
@@ -671,8 +429,6 @@ async def helpmoney(ctx):
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='Money Commands')
     embed.add_field(name='`>bitcoin`', value=':money_mouth: Bitcoin value', inline=True)
-    embed.add_field(name='`>currency (src) (dest) (value)`', value=':moneybag: Currency Conversion', inline=True)
-    embed.add_field(name='`>stock (company)`', value=':money_with_wings: Stock', inline=True)
     await ctx.send(embed=embed)
 
 
@@ -693,21 +449,6 @@ async def helpmusic(ctx):
     await ctx.send(embed=embed)
 
 
-@client.command(pass_context=True, aliases=['help_weather'])
-async def helpweather(ctx):
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
-    embed.set_author(name='Weather Commands')
-    embed.add_field(name='`>humdidity (place)`', value=':hot_face: Humidity', inline=True)
-    embed.add_field(name='`>temp (place)`', value=':cold_face: Temperature', inline=True)
-    embed.add_field(name='`>tempfeels (place)`', value=':sweat: Temperature Feel', inline=True)
-    embed.add_field(name='`>weather (place)`', value=':cold_sweat: Weather', inline=True)
-    embed.add_field(name='`>wind (place)`', value=':wind_blowing_face: Wind', inline=True)
-    await ctx.send(embed=embed)
-
-
 @client.command(pass_context=True, aliases=['help_features'])
 async def helpfeatures(ctx):
     r = random.randint(0, 255)
@@ -715,98 +456,9 @@ async def helpfeatures(ctx):
     b = random.randint(0, 255)
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='Other Features')
-    embed.add_field(name='Welcomes users on join', value='In channel member-log', inline=True)
-    embed.add_field(name='Leave message on user leave', value='In channel member-log', inline=True)
     embed.add_field(name='>ping', value='Pings!', inline=True)
     embed.add_field(name='>website', value="Sends the bot's website", inline=True)
     await ctx.send(embed=embed)
-
-
-@client.command()
-async def feedback(ctx, *, msg):
-    channel = client.get_channel(699699497206415401)
-    await ctx.send('Feedback has been sent')
-    await channel.send("\"" + str(msg).capitalize() + "\"" + ' from ' + ctx.message.author.mention)
-
-
-'''@client.command(brief='Money Minigame!')
-async def money(ctx):
-    money = random.randint(0, 75)
-    print('hi')
-    await ctx.send('Ishaan donated ')
-    print('hi')
-    with open('money.json', 'r') as f:
-        user = json.load(f)
-        print('hi')
-    await add_user(user)
-    print('hi')
-    with open('money.json', 'w') as f:
-        json.dump(user, f)
-        print('hi')
-async def add_user(user):
-    print('hello')
-    for i in money.json:
-        print('hello')
-        if i == user.id:
-            print('hello')
-            user[user.id] = {}
-            print('hello')
-    print('yo')
-    if user.id not in money.json:
-        print('yo')
-        print(user.id)
-        print('yo')
-        user[user.id] = {}
-        print('yo')'''
-
-'''
-@client.event
-async def on_member_join(member):
-    with open('users.json', 'w') as f:
-        users = users.load(f)
-    for user in guild:
-        for i in f:
-            if f["userscores"][i] != user:
-                with open('users.json', mode='w', encoding='utf-8') as feedsjson:
-                    entry = {}
-                    entry["userscores"]["user"] = i
-                    entry["userscores"]['exp'] = 0
-                    json.dump(entry, feedsjson)'''
-
-'''@client.event
-async def on_message(message):
-    with open('users.json', 'r') as f:
-        users = json.load(f)
-    await update_data(users, message.author)
-    await add_experience(users, message.author, 5)
-    await level_up(users, message.author, message.channel)
-    with open('users.json', 'w') as f:
-        json.dump(users, f)
-async def update_data(users, user):
-async def update_data(users, user):
-    for i in users.json:
-        if i == user.id:
-            users[user.id] = {}
-            users[user.id]['experience'] = 0
-            users[user.id]['level'] = 1
-
-    if user.id not in users:
-        print(user.id)
-        users[user.id] = {}
-        users[user.id]['experience'] = 0
-        users[user.id]['level'] = 1
-async def add_experience(users, user, exp):
-    users[user.id]['experience'] += exp
-async def level_up(users, user, channel):
-    experience = users[user.id]['experience']
-    lvl_start = users[user.id]['level']
-    lvl_end = int(experience ** (1 / 4))
-    if lvl_start < lvl_end:
-        await client.send_message(channel, '{} has leveled up {}'.format(user.mention, lvl_end))
-        users[user.id]['level'] = lvl_end
-@client.event
-async def on_member_remove(member):
-    await client.send_message('Bye')'''
 
 
 def servermemberlista():
