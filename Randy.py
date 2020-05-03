@@ -35,7 +35,7 @@ from youtube_search import YoutubeSearch
 TOKEN = ''
 
 # os.chdir(r'D:\BSD405-Bot')
-client = commands.Bot(command_prefix='>')
+client = commands.Bot(command_prefix='d>')
 
 
 def check(ctx):
@@ -352,16 +352,16 @@ async def help(ctx):
     b = random.randint(0, 255)
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='Randy Command List')
-    embed.add_field(name='`>about`', value=':eyes: About!', inline=True)
-    embed.add_field(name='`>vote`', value=':v: Vote for Randy!', inline=True)
-    embed.add_field(name='`>server`', value='Link to invite Randy & help server', inline=True)
-    embed.add_field(name='`>help_fun`', value=':smile: Fun Commands', inline=True)
-    embed.add_field(name='`>help_lang`', value=':blue_book: Language Commands', inline=True)
-    embed.add_field(name='`>help_math`', value=':regional_indicator_m: Math Commands', inline=True)
-    embed.add_field(name='`>help_mod`', value=':hammer_pick: Moderation Commands', inline=True)
-    embed.add_field(name='`>help_money`', value=':moneybag: Money Commands', inline=True)
-    embed.add_field(name='`>help_music`', value=':musical_note:  Music Commands', inline=True)
-    embed.add_field(name='`>help_features`', value=':fork_and_knife: Other Features', inline=True)
+    embed.add_field(name='`d>about`', value=':eyes: About!', inline=True)
+    embed.add_field(name='`d>vote`', value=':v: Vote for Randy!', inline=True)
+    embed.add_field(name='`d>server`', value='Link to invite Randy & help server', inline=True)
+    embed.add_field(name='`d>help_fun`', value=':smile: Fun Commands', inline=True)
+    embed.add_field(name='`d>help_lang`', value=':blue_book: Language Commands', inline=True)
+    embed.add_field(name='`d>help_math`', value=':regional_indicator_m: Math Commands', inline=True)
+    embed.add_field(name='`d>help_mod`', value=':hammer_pick: Moderation Commands', inline=True)
+    embed.add_field(name='`d>help_money`', value=':moneybag: Money Commands', inline=True)
+    embed.add_field(name='`d>help_music`', value=':musical_note:  Music Commands', inline=True)
+    embed.add_field(name='`d>help_features`', value=':fork_and_knife: Other Features', inline=True)
     await ctx.send(embed=embed)
 
 
@@ -372,10 +372,10 @@ async def helpfun(ctx):
     b = random.randint(0, 255)
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='Fun Commands')
-    embed.add_field(name='`>8ball (question)`', value=':8ball: Predictions', inline=True)
-    embed.add_field(name='`>avatar (user)`', value=':clown: Avatar', inline=True)
-    embed.add_field(name='`>dice`', value=':1234: Roll dice', inline=True)
-    embed.add_field(name='`>flip`', value=':first_place: Flip coin', inline=True)
+    embed.add_field(name='`d>8ball (question)`', value=':8ball: Predictions', inline=True)
+    embed.add_field(name='`d>avatar (user)`', value=':clown: Avatar', inline=True)
+    embed.add_field(name='`d>dice`', value=':1234: Roll dice', inline=True)
+    embed.add_field(name='`d>flip`', value=':first_place: Flip coin', inline=True)
     await ctx.send(embed=embed)
 
 
@@ -387,8 +387,8 @@ async def helplanguage(ctx):
     b = random.randint(0, 255)
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='Language Commands')
-    embed.add_field(name='`>quote`', value=':orange_book: Quote', inline=True)
-    embed.add_field(name='`>urban (word)`', value=':closed_book: Urban Dictionary', inline=True)
+    embed.add_field(name='`d>quote`', value=':orange_book: Quote', inline=True)
+    embed.add_field(name='`d>urban (word)`', value=':closed_book: Urban Dictionary', inline=True)
     await ctx.send(embed=embed)
 
 
@@ -399,10 +399,10 @@ async def helpmath(ctx):
     b = random.randint(0, 255)
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='General Information Commands')
-    embed.add_field(name='`>add`', value=':heavy_plus_sign: Add numbers', inline=True)
-    embed.add_field(name='`>sub`', value=':heavy_minus_sign: Subtract numbers', inline=True)
-    embed.add_field(name='`>mult`', value=':x: Multiply numbers', inline=True)
-    embed.add_field(name='`>div`', value=':heavy_division_sign: Divide numbers', inline=True)
+    embed.add_field(name='`d>add`', value=':heavy_plus_sign: Add numbers', inline=True)
+    embed.add_field(name='`d>sub`', value=':heavy_minus_sign: Subtract numbers', inline=True)
+    embed.add_field(name='`d>mult`', value=':x: Multiply numbers', inline=True)
+    embed.add_field(name='`d>div`', value=':heavy_division_sign: Divide numbers', inline=True)
     await ctx.send(embed=embed)
 
 
@@ -413,11 +413,11 @@ async def helpmoderator(ctx):
     b = random.randint(0, 255)
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='Moderation Commands')
-    embed.add_field(name='>ban (user)', value=':hammer: Bans a user', inline=True)
-    # embed.add_field(name='>unban (user)', value=':hammer: Unbans a user', inline=True)
-    embed.add_field(name='>kick (user)', value=':interrobang: Kicks a user', inline=True)
-    embed.add_field(name='>clear (num)', value=':x: Clear messages', inline=True)
-    embed.add_field(name='>msg (broadcast)', value=':loudspeaker: Broadcast a message', inline=True)
+    embed.add_field(name='d>ban (user)', value=':hammer: Bans a user', inline=True)
+    # embed.add_field(name='d>unban (user)', value=':hammer: Unbans a user', inline=True)
+    embed.add_field(name='d>kick (user)', value=':interrobang: Kicks a user', inline=True)
+    embed.add_field(name='d>clear (num)', value=':x: Clear messages', inline=True)
+    embed.add_field(name='d>msg (broadcast)', value=':loudspeaker: Broadcast a message', inline=True)
     await ctx.send(embed=embed)
 
 
@@ -428,7 +428,7 @@ async def helpmoney(ctx):
     b = random.randint(0, 255)
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='Money Commands')
-    embed.add_field(name='`>bitcoin`', value=':money_mouth: Bitcoin value', inline=True)
+    embed.add_field(name='`d>bitcoin`', value=':money_mouth: Bitcoin value', inline=True)
     await ctx.send(embed=embed)
 
 
@@ -439,13 +439,13 @@ async def helpmusic(ctx):
     b = random.randint(0, 255)
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='Music Commands')
-    embed.add_field(name='`>join`', value=':thumbsup: Joins a voice channel', inline=True)
-    embed.add_field(name='`>leave`', value=':thumbsdown: Leaves a voice channel', inline=True)
-    embed.add_field(name='`>lyrics (singer),(song) [comma is necessary]`', value=':page_with_curl: Song Lyrics',
+    embed.add_field(name='`d>join`', value=':thumbsup: Joins a voice channel', inline=True)
+    embed.add_field(name='`d>leave`', value=':thumbsdown: Leaves a voice channel', inline=True)
+    embed.add_field(name='`d>lyrics (singer),(song) [comma is necessary]`', value=':page_with_curl: Song Lyrics',
                     inline=True)
-    embed.add_field(name='`>pause`', value=':speaker:  Resume a song!', inline=True)
-    embed.add_field(name='`>play (name)`', value=':person_tipping_hand: Plays a song!', inline=True)
-    embed.add_field(name='`>resume`', value=':mute: Pause a song!', inline=True)
+    embed.add_field(name='`d>pause`', value=':speaker:  Resume a song!', inline=True)
+    embed.add_field(name='`d>play (name)`', value=':person_tipping_hand: Plays a song!', inline=True)
+    embed.add_field(name='`d>resume`', value=':mute: Pause a song!', inline=True)
     await ctx.send(embed=embed)
 
 
@@ -456,8 +456,8 @@ async def helpfeatures(ctx):
     b = random.randint(0, 255)
     embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
     embed.set_author(name='Other Features')
-    embed.add_field(name='>ping', value='Pings!', inline=True)
-    embed.add_field(name='>website', value="Sends the bot's website", inline=True)
+    embed.add_field(name='d>ping', value='Pings!', inline=True)
+    embed.add_field(name='d>website', value="Sends the bot's website", inline=True)
     await ctx.send(embed=embed)
 
 
