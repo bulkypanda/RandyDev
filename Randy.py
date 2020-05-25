@@ -186,41 +186,6 @@ async def queue(ctx):
     await ctx.send(embed=embed)
 
 
-'''@client.command()
-async def spotify(ctx, *, url):
-    import subprocess
-    y = url.split("/")
-    z = y[4]
-    command = 'curl -X "GET" "https://api.spotify.com/v1/playlists/' + z + '/tracks?market=ES&fields=items(added_by.id%2Ctrack(name%2Chref%2Calbum(name%2Chref)))&limit=100&offset=5" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQA_mONCRp0yJl7LUPeUl-usDBOel_H_Bv2laRvXTGI8RA1gXCsJj0XuuG4SgXHIBWhQjJGBYOyCQvwtDB3KWaPyhQgROB1sF4hVGnqMYeCPAOjM4WGWiF5guudZYU0FBNnttZKSWkuWe-bSCjGFBbAf4sxRFR0Jav-Pz5Z8vKAR"'
-    p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    out, err = p.communicate()
-    a = json.loads(out)
-    def resultfunction(num):
-        if num > -1:
-            results = a['items'][num]['track']['name']
-            return results
-    x = 0
-    data = await joinMusicChannel(ctx)
-    if data == True:
-        a = resultfunction(x)
-        results = YoutubeSearch(str(a), max_results=1).to_json()
-        x = x + 1
-        result = json.loads(results)
-        formatted_data = result["videos"][0]["link"]
-        title = result["videos"][0]["title"]
-        final = "https://www.youtube.com" + formatted_data
-        await ctx.send('Loading...')
-        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-            file = ydl.extract_info(final, download=True)
-        await ctx.channel.purge(limit=1)
-        guild = ctx.message.guild
-        voice_client = guild.voice_client
-        path = str(file['title']) + "-" + str(file['id'] + ".mp3")
-        voice_client.play(discord.FFmpegPCMAudio(path), after=lambda x: endSong(guild, path))
-        voice_client.source = discord.PCMVolumeTransformer(voice_client.source, 1)
-        await ctx.send(':musical_note: **Playing:** `' + title + '`')'''
-
-
 @client.command()
 async def join(ctx):
     channel = ctx.author.voice.channel
@@ -256,21 +221,6 @@ async def resume(ctx):
         await ctx.send('**Resuming...**')
     else:
         await ctx.send('**The song is not paused**')
-
-
-'''
-@client.command(pass_contxt=True)
-async def queue(ctx, url):
-    server = ctx.message.server
-    voice_client = ctx.voice_client_in(server)
-    player = await voice_client.create_ytdl_player(url)
-
-    if server.id in queues:
-        queues[server.id].append(player)
-    else:
-        queues[server.id] = [player]
-    await ctx.send('Video queued')
-    '''
 
 
 @client.command(brief='Kick')
