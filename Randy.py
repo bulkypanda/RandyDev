@@ -103,6 +103,11 @@ async def vote(ctx):
     embed.add_field(name='DBL', value='https://discordbotlist.com/bots/randy/upvote')
     await ctx.send(embed=embed)
 
+    
+for filename in os.listdir('./cogs'):
+    if filename.endswith('.py'):
+        client.load_extension(f'cogs.{filename[:-3]}')
+    
 
 @client.command()
 async def load(ctx, extension):
