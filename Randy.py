@@ -120,35 +120,6 @@ async def reload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
 
 
-for filename in os.listdir('./cogs'):
-    if filename.endswith('.py'):
-        client.load_extension(f'cogs.{filename[:-3]}')
-
-
-async def joinMusicChannel(ctx):
-    try:
-        channel = ctx.author.voice.channel
-    except:
-        await ctx.send("Please join a voice channel.")
-        return False
-
-    vc = ctx.voice_client
-    if vc == None:
-        await channel.connect()
-    return True
-
-
-@client.command(pass_context=True)
-async def resume(ctx):
-    """Resumes a paused song [Format: %resume]"""
-    Paused = ctx.voice_client.is_paused()
-    if Paused == True:
-        ctx.voice_client.resume()
-        await ctx.send('**Resuming...**')
-    else:
-        await ctx.send('**The song is not paused**')
-
-
 @client.command(brief='Kick')
 @has_permissions(kick_members=True)
 async def kick(ctx, member: discord.Member, *, reason='None'):
@@ -337,35 +308,11 @@ async def helpfeatures(ctx):
     await ctx.send(embed=embed)
 
 
-def servermemberlista():
-    x = 0
-    y = 0
-    for guild in client.guilds:
-        for member in guild.members:
-            x = x + 1
-            # print(x)
-    return x
-
-
-def servermemberlistb():
-    y = 0
-    for guild in client.guilds:
-        y = y + 1
-    # y = y - 70
-    return y
-
-
 @client.event
 async def on_ready():
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
-    servers = client.guilds
-    x = servermemberlista()
-    y = servermemberlistb()
-    await client.change_presence(status=discord.Status.online,
-                                 activity=discord.Game(name=">help for " + str(x) + ' users in ' + str(y) + " servers",
-                                                       type=3))
     print('------')
 
 
