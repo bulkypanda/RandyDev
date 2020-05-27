@@ -39,38 +39,30 @@ client = commands.Bot(command_prefix='>')
 
 
 @client.command()
-async def add(ctx):
-    await ctx.send("What is the first number?")
-    firstnum = await get_input_of_type(int, ctx)
-    await ctx.send("What is the second number?")
-    secondnum = await get_input_of_type(int, ctx)
+async def add(ctx, firstnum, secondnum):
+    firstnum = int(firstnum)
+    secondnum = int(secondnum)
     await ctx.send(f"{firstnum} + {secondnum} = {firstnum + secondnum}")
 
 
 @client.command(aliases=['sub'])
-async def subtract(ctx):
-    await ctx.send("What is the first number?")
-    firstnum = await get_input_of_type(int, ctx)
-    await ctx.send("What is the second number?")
-    secondnum = await get_input_of_type(int, ctx)
+async def subtract(ctx, firstnum, secondnum):
+    firstnum = int(firstnum)
+    secondnum = int(secondnum))
     await ctx.send(f"{firstnum} - {secondnum} = {firstnum - secondnum}")
 
 
 @client.command(aliases=['multiply'])
-async def mult(ctx):
-    await ctx.send("What is the first number?")
-    firstnum = await get_input_of_type(int, ctx)
-    await ctx.send("What is the second number?")
-    secondnum = await get_input_of_type(int, ctx)
+async def mult(ctx, firstnum, secondnum):
+    firstnum = int(firstnum)
+    secondnum = int(secondnum)
     await ctx.send(f"{firstnum} * {secondnum} = {firstnum * secondnum}")
 
 
 @client.command(aliases=['division', 'div'])
-async def divide(ctx):
-    await ctx.send("What is the first number?")
-    firstnum = await get_input_of_type(int, ctx)
-    await ctx.send("What is the second number?")
-    secondnum = await get_input_of_type(int, ctx)
+async def divide(ctx, firstnum, secondnum):
+    firstnum = int(firstnum)
+    secondnum = int(secondnum)
     await ctx.send(f"{firstnum} / {secondnum} = {firstnum / secondnum}")
 
 
