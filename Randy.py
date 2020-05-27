@@ -284,23 +284,6 @@ async def helpmoney(ctx):
     await ctx.send(embed=embed)
 
 
-@client.command(pass_context=True, aliases=['help_music'])
-async def helpmusic(ctx):
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    embed = discord.Embed(color=discord.Colour.from_rgb(r, g, b))
-    embed.set_author(name='Music Commands')
-    embed.add_field(name='`>join`', value=':thumbsup: Joins a voice channel', inline=True)
-    embed.add_field(name='`>leave`', value=':thumbsdown: Leaves a voice channel', inline=True)
-    embed.add_field(name='`>lyrics (singer),(song) [comma is necessary]`', value=':page_with_curl: Song Lyrics',
-                    inline=True)
-    embed.add_field(name='`>pause`', value=':speaker:  Resume a song!', inline=True)
-    embed.add_field(name='`>play (name)`', value=':person_tipping_hand: Plays a song!', inline=True)
-    embed.add_field(name='`>resume`', value=':mute: Pause a song!', inline=True)
-    await ctx.send(embed=embed)
-
-
 @client.command(pass_context=True, aliases=['help_features'])
 async def helpfeatures(ctx):
     r = random.randint(0, 255)
