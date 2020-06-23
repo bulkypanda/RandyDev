@@ -7,8 +7,8 @@
 An open source discord bot written in python that can do anything and everything. The bot has 70+ commands belonging to various categories. 
 
 ## Invites and Help
-[Invite here](https://bit.ly/2zVYHyf)
-[Discord Help Server](https://discord.com/invite/Gk8vH2M)
+- [Invite here](https://bit.ly/2zVYHyf)
+- [Discord Help Server](https://discord.com/invite/Gk8vH2M)
 
 ## Developers
 ![credsimg](https://cdn.discordapp.com/attachments/717237991474724908/724827377103798332/unknown.png)
@@ -35,18 +35,18 @@ We support self hosting. You can contact us in our [help server](https://discord
 
 ## Commands
 
-![help](https://cdn.discordapp.com/attachments/702004739742892042/724820255678922793/unknown.png  =500x)
-![helpimage](https://cdn.discordapp.com/attachments/702004739742892042/724821712188735538/unknown.png =500x)
-![helpinfo](https://cdn.discordapp.com/attachments/702004739742892042/724822803613876324/unknown.png =500x)
-![helplang](https://cdn.discordapp.com/attachments/702004739742892042/724823070493114428/unknown.png =500x)
-![helplevel](https://cdn.discordapp.com/attachments/702004739742892042/724823312022372846/unknown.png =500x)
-![helpmath](https://cdn.discordapp.com/attachments/702004739742892042/724823699945029642/unknown.png =500x)
-![helpmg](https://cdn.discordapp.com/attachments/702004739742892042/724824428231262329/unknown.png =500x)
-![helpmod](https://cdn.discordapp.com/attachments/702004739742892042/724824833593966592/unknown.png =500x)
-![helpmoney](https://cdn.discordapp.com/attachments/702004739742892042/724825094668681276/unknown.png =500x)
-![helptext](https://cdn.discordapp.com/attachments/702004739742892042/724825314777366549/unknown.png =500x)
-![helputil](https://cdn.discordapp.com/attachments/702004739742892042/724825547460575262/unknown.png =500x)
-![helpweather](https://cdn.discordapp.com/attachments/702004739742892042/724826150311952384/unknown.png =500x)
+![help](https://cdn.discordapp.com/attachments/702004739742892042/724820255678922793/unknown.png)
+![helpimage](https://cdn.discordapp.com/attachments/702004739742892042/724821712188735538/unknown.png)
+![helpinfo](https://cdn.discordapp.com/attachments/702004739742892042/724822803613876324/unknown.png)
+![helplang](https://cdn.discordapp.com/attachments/702004739742892042/724823070493114428/unknown.png)
+![helplevel](https://cdn.discordapp.com/attachments/702004739742892042/724823312022372846/unknown.png)
+![helpmath](https://cdn.discordapp.com/attachments/702004739742892042/724823699945029642/unknown.png)
+![helpmg](https://cdn.discordapp.com/attachments/702004739742892042/724824428231262329/unknown.png)
+![helpmod](https://cdn.discordapp.com/attachments/702004739742892042/724824833593966592/unknown.png)
+![helpmoney](https://cdn.discordapp.com/attachments/702004739742892042/724825094668681276/unknown.png)
+![helptext](https://cdn.discordapp.com/attachments/702004739742892042/724825314777366549/unknown.png)
+![helputil](https://cdn.discordapp.com/attachments/702004739742892042/724825547460575262/unknown.png)
+![helpweather](https://cdn.discordapp.com/attachments/702004739742892042/724826150311952384/unknown.png)
 
 ## License
 #### The MIT License (MIT)
