@@ -35,7 +35,11 @@ We support self hosting. You can contact us in our [help server](https://discord
 
 ## Commands
 
-![help](https://cdn.discordapp.com/attachments/702004739742892042/724820255678922793/unknown.png  =500x)![helpimage](https://cdn.discordapp.com/attachments/702004739742892042/724821712188735538/unknown.png =500x)![helpinfo](https://cdn.discordapp.com/attachments/702004739742892042/724822803613876324/unknown.png =500x)![helplang](https://cdn.discordapp.com/attachments/702004739742892042/724823070493114428/unknown.png =500x)![helplevel](https://cdn.discordapp.com/attachments/702004739742892042/724823312022372846/unknown.png =500x)
+![help](https://cdn.discordapp.com/attachments/702004739742892042/724820255678922793/unknown.png  =500x)
+![helpimage](https://cdn.discordapp.com/attachments/702004739742892042/724821712188735538/unknown.png =500x)
+![helpinfo](https://cdn.discordapp.com/attachments/702004739742892042/724822803613876324/unknown.png =500x)
+![helplang](https://cdn.discordapp.com/attachments/702004739742892042/724823070493114428/unknown.png =500x)
+![helplevel](https://cdn.discordapp.com/attachments/702004739742892042/724823312022372846/unknown.png =500x)
 ![helpmath](https://cdn.discordapp.com/attachments/702004739742892042/724823699945029642/unknown.png =500x)
 ![helpmg](https://cdn.discordapp.com/attachments/702004739742892042/724824428231262329/unknown.png =500x)
 ![helpmod](https://cdn.discordapp.com/attachments/702004739742892042/724824833593966592/unknown.png =500x)
