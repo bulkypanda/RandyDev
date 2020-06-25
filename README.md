@@ -1,5 +1,4 @@
 # Randy
-![License](https://img.shields.io/github/license/bulkypanda/RandyDev?color=Violet)
 ![top.gg](https://top.gg/api/widget/status/696185454759903264.svg)
 ![top.gg](https://top.gg/api/widget/lib/696185454759903264.svg)
 ![top.gg](https://top.gg/api/widget/upvotes/696185454759903264.svg)
@@ -52,13 +51,75 @@ We support self hosting. You can contact us in our [help server](https://discord
 ![helpweather](https://cdn.discordapp.com/attachments/702004739742892042/724826150311952384/unknown.png)
 
 ## License
-#### The MIT License (MIT)
 
-Copyright ©  `2020`  `Arya Gummadi`
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+[](https://github.com/bulkypanda/RandyDev/blob/master/License.txt#)[](https://github.com/bulkypanda/RandyDev/blob/master/License.txt#)    
 
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Copyright 2020 Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice, the following attribution assuance and permission notice shall be included in all copies or substantial portions of the Software.
+
+ATTRIBUTION ASSURANCE LICENSE (adapted from the original BSD license)
+
+Redistribution and use in source and binary forms, with or without
+
+modification, are permitted provided that the conditions below are met.
+
+These conditions require a modest attribution to Arya Gummadi, Ishaan Venkat and Raza Ul Haq Khan (the
+
+"Author"), who hopes that its promotional value may help justify the
+
+thousands of dollars in otherwise billable time invested in writing
+
+this and other freely available, open-source software.
+
+1. Redistributions of source code, in whole or part and with or without
+
+modification (the "Code"), must prominently display this
+
+text.
+
+===================================================
+
+|Copyright 2020 Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan |
+
+|URL https://bulkypanda.github.io/RandyDev/                                   |
+
+===================================================
+
+2. Redistributions of the Code in source and/or binary form, use of the code in a service (free or paid) must be accompanied by
+
+this text in any documentation and, each time the resulting
+
+executable program, service or a program dependent thereon is launched, a
+
+prominent display (e.g., splash screen or banner text) of the Author's
+
+attribution information, which includes:
+
+(a) Name ("AUTHOR") Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan,
+
+(b) Professional identification ("PROFESSIONAL IDENTIFICATION") Coders and Graphic Designers, and
+
+(c) URL ("URL") https://bulkypanda.github.io/RandyDev/.
+
+3. Neither the name nor any trademark of the Author may be used to
+
+endorse or promote products derived from this software without specific
+
+prior written permission.
+
+4. Users are entirely responsible, to the exclusion of the Author and
+
+any other persons, for compliance with (1) regulations set by owners or
+
+administrators of employed equipment, (2) licensing terms of any other
+
+software, and (3) local regulations regarding use, including those
+
+regarding import, export, and use of encryption software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
