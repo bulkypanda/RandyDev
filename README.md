@@ -56,7 +56,7 @@ We support self hosting. You can contact us in our [help server](https://discord
 
 [](https://github.com/bulkypanda/RandyDev/blob/master/License.txt#)[](https://github.com/bulkypanda/RandyDev/blob/master/License.txt#)    
 
-Copyright 2020 Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan
+Copyright © `2020` `Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan`
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -82,13 +82,13 @@ modification (the "Code"), must prominently display this
 
 text.
 
-===================================================
+=====================================================================
 
-|Copyright 2020 Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan |
+|Copyright © `2020` `Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan` |
 
-|URL https://bulkypanda.github.io/RandyDev/                                   |
+|URL `https://bulkypanda.github.io/RandyDev/`                       |
 
-===================================================
+=====================================================================
 
 2. Redistributions of the Code in source and/or binary form, use of the code in a service (free or paid) must be accompanied by
 
@@ -100,11 +100,11 @@ prominent display (e.g., splash screen or banner text) of the Author's
 
 attribution information, which includes:
 
-(a) Name ("AUTHOR") Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan,
+(a) Name ("AUTHOR") `Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan`,
 
-(b) Professional identification ("PROFESSIONAL IDENTIFICATION") Coders and Graphic Designers, and
+(b) Professional identification ("PROFESSIONAL IDENTIFICATION") `Coders and Graphic Designers`, and
 
-(c) URL ("URL") https://bulkypanda.github.io/RandyDev/.
+(c) URL ("URL") `https://bulkypanda.github.io/RandyDev/`.
 
 3. Neither the name nor any trademark of the Author may be used to
 
@@ -123,3 +123,4 @@ software, and (3) local regulations regarding use, including those
 regarding import, export, and use of encryption software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
