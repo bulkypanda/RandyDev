@@ -1,32 +1,4 @@
-# Work with Python 3.6
-import discord
 from discord.ext import commands
-import json
-# import fin as fin
-import getpass
-# import praw
-import requests
-import random
-import asyncio
-import aiohttp
-import urllib
-import urllib.parse, urllib.request, re
-from discord import Game
-from discord.ext.commands import Bot
-from discord.ext import commands
-from discord.utils import get
-from ftplib import FTP
-from yahoo_fin import stock_info as si
-import covid19_data
-import webbrowser
-import os
-import bs4
-import wikipediaapi
-import webbrowser
-import youtube_dl
-from googletrans import Translator
-from discord.voice_client import VoiceClient
-from discord.utils import get
 
 
 class Features(commands.Cog):
