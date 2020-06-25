@@ -3,6 +3,9 @@
 ![top.gg](https://top.gg/api/widget/status/696185454759903264.svg)
 ![top.gg](https://top.gg/api/widget/lib/696185454759903264.svg)
 ![top.gg](https://top.gg/api/widget/upvotes/696185454759903264.svg)
+![forks](https://img.shields.io/github/forks/bulkypanda/RandyDev?style=social)
+![stars](https://img.shields.io/github/stars/bulkypanda/RandyDev?style=social)
+![discord](https://img.shields.io/discord/699467769724403742)
 
 An open source discord bot written in python that can do anything and everything. The bot has 70+ commands belonging to various categories. 
 
@@ -27,11 +30,11 @@ Graphics:
 
 ## Self Hosting
 
-We support self hosting. You can contact us in our [help server](https://discord.com/invite/Gk8vH2M) for any help related to self hosting. 
+We support self hosting. You can contact us in our [help server](https://discord.com/invite/Gk8vH2M) for any help related to self hosting. In the SQLite database, two tables are required: usersjson and levelsjson. usersjson contains three rows: userid, experience and level. levelsjson contains two rows: guildid and tf (yes/no setting for levelling reactions).
 - Python 3.6
 - pip install -r requirements.txt
 - Discord Bot Token
-- sqlite database
+- SQLite database
 
 ## Commands
 
