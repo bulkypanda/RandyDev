@@ -1,7 +1,9 @@
+
 # Randy
 ![top.gg](https://top.gg/api/widget/status/696185454759903264.svg)
 ![top.gg](https://top.gg/api/widget/lib/696185454759903264.svg)
 ![top.gg](https://top.gg/api/widget/upvotes/696185454759903264.svg)
+![top.gg](https://top.gg/api/widget/servers/696185454759903264.svg)
 ![forks](https://img.shields.io/github/forks/bulkypanda/RandyDev?style=social)
 ![stars](https://img.shields.io/github/stars/bulkypanda/RandyDev?style=social)
 ![discord](https://img.shields.io/discord/699467769724403742)
@@ -13,17 +15,13 @@ An open source discord bot written in python that can do anything and everything
 - [Discord Help Server](https://discord.com/invite/Gk8vH2M)
 
 ## Developers
-![credsimg](https://cdn.discordapp.com/attachments/717237991474724908/724827377103798332/unknown.png)
 
 Bot Commands:
 [Arya Gummadi](https://www.github.com/bulkypanda) 
 [Ishaan Venkat](https://www.github.com/hvhvuu)
 
-Website:
-[Arya Gummadi](https://www.github.com/bulkypanda)
-
 Graphics:
-[Raza Ul Haq Khan](https://www.github.com/squidtopus)
+[Raza Ul Haq Khan](https://github.com/RazaUlHaqKhan)
 
 
 
@@ -50,6 +48,22 @@ We support self hosting. You can contact us in our [help server](https://discord
 ![helputil](https://cdn.discordapp.com/attachments/702004739742892042/724825547460575262/unknown.png)
 ![helpweather](https://cdn.discordapp.com/attachments/702004739742892042/724826150311952384/unknown.png)
 
+## Privacy Policy
+We are fully committed to protecting to your privacy.
+
+#### Information Stored
+- User information such as: user id, experience points and the level. 
+- Guild information such as guild id and the on/off level system setting.
+
+#### Data Usage
+We use this data to determine the experience and the level the user is in.
+
+#### Distribution
+We will not disclose any personal information without your consent and we do not share it with any external sites.
+
+#### Concerns and Contact
+You can use the `>removemydata` command in order to have your data removed. If you have any further issues, you can contact us in our help server.
+
 ## License
 
 
@@ -60,7 +74,7 @@ Copyright © `2020` `Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan`
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice, the following attribution assuance and permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice, the following attribution assurance and permission notice shall be included in all copies or substantial portions of the Software.
 
 ATTRIBUTION ASSURANCE LICENSE (adapted from the original BSD license)
 
@@ -100,11 +114,9 @@ prominent display (e.g., splash screen or banner text) of the Author's
 
 attribution information, which includes:
 
-(a) Name ("AUTHOR") `Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan`,
+(a) Name ("AUTHOR") `Arya Gummadi, Ishaan Venkat, Raza Ul Haq Khan` and 
 
-(b) Professional identification ("PROFESSIONAL IDENTIFICATION") `Coders and Graphic Designers`, and
-
-(c) URL ("URL") `https://bulkypanda.github.io/RandyDev/`.
+(b) URL ("URL") `https://bulkypanda.github.io/RandyDev/`.
 
 3. Neither the name nor any trademark of the Author may be used to
 
@@ -123,4 +135,3 @@ software, and (3) local regulations regarding use, including those
 regarding import, export, and use of encryption software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
