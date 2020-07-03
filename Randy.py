@@ -338,14 +338,7 @@ async def on_guild_remove(guild):
 async def servers(ctx):
     servers = list(client.guilds)
     await ctx.send(f"Connected on {str(len(servers))} servers!")
-
-
-@client.command()
-async def bruhs(ctx):
-    servers = list(client.guilds)
-    await ctx.send(f"Connected on {str(len(servers))} servers:")
-    await ctx.send('\n'.join(server.name for server in servers))
-
+    
 
 @client.command()
 async def rip(ctx):
@@ -814,12 +807,6 @@ async def clear_error(ctx, error):
         await ctx.send('Sorry, you do not have permissions to clear messages!')
 
 
-@client.command()
-async def ids(ctx):
-    for guild in client.guilds:
-        print(guild.id)
-
-
 @client.command(aliases=['msg', 'Message', 'broadcast', 'broad'], brief='Only for admins!')
 @has_permissions(administrator=True)
 async def message(ctx, *, message):
@@ -1278,26 +1265,6 @@ async def presence(ctx, type, *, status):
         await ctx.send("bro, this command owner only. r u owner? no right? then don't use it")
 
 
-def servermemberlista():
-    x = 0
-    y = 0
-    for guild in client.guilds:
-        for member in guild.members:
-            x = x + 1
-            # print(x)
-    return x
-
-
-def servermemberlistb():
-    y = 0
-    for guild in client.guilds:
-        y = y + 1
-    # y = y - 70
-    return y
-
-
-
-
 @client.event
 async def on_ready():
     print('Logged in as')
@@ -1306,10 +1273,8 @@ async def on_ready():
     servers = client.guilds
     x = servermemberlista()
     y = servermemberlistb()
-    # activity = discord.Activity(name=">help in " + str(y) + " servers", type=discord.ActivityType.listening)
     await client.change_presence(
         activity=discord.Streaming(name=">help || Randy", url='https://www.twitch.tv/hvhvuu'))
-    # await client.change_presence(activity=activity)
     print('------')
 
 
