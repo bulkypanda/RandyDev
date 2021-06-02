@@ -81,7 +81,7 @@ twitch-python==0.0.5
 typing-extensions==3.7.4.2
 urban-dictionary-parser-py==0.1
 urbandictionary==1.1
-urllib3==1.25.8
+urllib3==1.26.5
 utils==1.0.1
 virtualenv==20.0.16
 w3lib==1.21.0
