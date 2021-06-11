@@ -86,7 +86,7 @@ utils==1.0.1
 virtualenv==20.0.16
 w3lib==1.21.0
 websocket-client==0.57.0
-websockets==8.1
+websockets==9.1
 Wikipedia-API==0.5.4
 yahoo-fin==0.8.4
 yarl==1.4.2
